@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ProjectsService} from '../services/projects.service';
+import {JsonService} from '../services/json.service';
+import {faPlus, faTimes, faStar} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-projects-component',
@@ -8,11 +9,13 @@ import {ProjectsService} from '../services/projects.service';
 })
 export class ProjectsComponentComponent implements OnInit {
   projects = [];
-
-  constructor(private projetsService: ProjectsService) { }
+  faPlus = faPlus;
+  faTimes = faTimes;
+  faStar = faStar;
+  constructor(private jsonService: JsonService) { }
 
   ngOnInit() {
-    this.projects = this.projetsService.getProjects();
+    this.projects = this.jsonService.getProjects();
   }
 
 }

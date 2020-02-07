@@ -1,3 +1,23 @@
-<p>
-  experiences-component works!
-</p>
+<section class="page-section" id="experiences">
+  <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Expériences professionelles</h2>
+
+  <!-- Icon Divider -->
+  <div class="divider-custom">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon">
+      <fa-icon [icon]="faStar"></fa-icon>
+    </div>
+    <div class="divider-custom-line"></div>
+  </div>
+
+  <vertical-timeline>
+    <vertical-timeline-card *ngFor='let entry of experiences;let i = index' [timeString]="entry.year" [dateValue]="entry.annee">
+      <div class="container" [ngClass]="{ left: i%2!==0, right:i%2==0}">
+          <h2>{{entry.entreprise}}</h2>
+          <h3>[{{entry.contrat}}] {{entry.poste}}</h3>
+          <p>{{entry.technos}}</p>
+          <p>{{entry.description}}</p>
+      </div>
+    </vertical-timeline-card>
+  </vertical-timeline>
+</section>

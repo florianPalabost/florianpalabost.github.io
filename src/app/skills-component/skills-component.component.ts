@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {faStar} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-skills-component',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills-component.component.scss']
 })
 export class SkillsComponentComponent implements OnInit {
-
+  faStar = faStar;
   constructor() { }
 
   ngOnInit() {

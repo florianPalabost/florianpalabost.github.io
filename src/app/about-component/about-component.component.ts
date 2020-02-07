@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {faDownload, faStar} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-about-component',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-component.component.scss']
 })
 export class AboutComponentComponent implements OnInit {
+  faDownload = faDownload;
+  faStar = faStar;
 
   constructor() { }
 

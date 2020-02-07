@@ -10,6 +10,9 @@ import { EducationsComponentComponent } from './educations-component/educations-
 import { InterestsComponentComponent } from './interests-component/interests-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { AboutComponentComponent } from './about-component/about-component.component';
+import {HttpClientModule} from '@angular/common/http';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {VerticalTimelineModule} from 'angular-vertical-timeline';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { AboutComponentComponent } from './about-component/about-component.compo
     AboutComponentComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FontAwesomeModule,
+    VerticalTimelineModule
   ],
   providers: [],
   bootstrap: [AppComponent]
