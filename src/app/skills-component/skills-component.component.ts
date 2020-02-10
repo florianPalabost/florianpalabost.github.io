@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {faStar} from '@fortawesome/free-solid-svg-icons';
 import {JsonService} from '../services/json.service';
+import {ISkill} from '../../models/skills';
 
 @Component({
   selector: 'app-skills-component',
@@ -9,7 +10,7 @@ import {JsonService} from '../services/json.service';
 })
 export class SkillsComponentComponent implements OnInit {
   faStar = faStar;
-  skills = [];
+  skills: ISkill[] = [];
   constructor(private jsonService: JsonService) { }
 
   ngOnInit() {

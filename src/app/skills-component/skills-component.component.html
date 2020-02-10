@@ -14,25 +14,25 @@
     <div class="col-md-3 col-lg-3">
       <h3>Backend</h3>
         <ul>
-          <li class="list-unstyled" *ngFor="let skill of skills.backend"><span class="mt-5">{{skill}}</span></li>
+          <li class="list-unstyled" *ngFor="let skill of skills['backend']"><span class="mt-5">{{skill}}</span></li>
         </ul>
     </div>
     <div class="col-md-3 col-lg-3">
       <h3>Frontend</h3>
       <ul>
-        <li class="list-unstyled" *ngFor="let skill of skills.frontend"><span class="mt-5">{{skill}}</span></li>
+        <li class="list-unstyled" *ngFor="let skill of skills['frontend']"><span class="mt-5">{{skill}}</span></li>
       </ul>
     </div>
     <div class="col-md-3 col-lg-3">
       <h3>BDD</h3>
       <ul>
-        <li class="list-unstyled " *ngFor="let skill of skills.bdd"><span class="mt-5">{{skill}}</span></li>
+        <li class="list-unstyled " *ngFor="let skill of skills['bdd']"><span class="mt-5">{{skill}}</span></li>
       </ul>
     </div>
     <div class="col-md-3 col-lg-3">
       <h3>Autres</h3>
       <ul>
-        <li class="list-unstyled " *ngFor="let skill of skills.others"><span class="mt-5">{{skill}}</span></li>
+        <li class="list-unstyled " *ngFor="let skill of skills['others']"><span class="mt-5">{{skill}}</span></li>
       </ul>
     </div>
   </div>
