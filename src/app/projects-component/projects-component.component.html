@@ -1,0 +1,85 @@
+<!-- Portfolio Section -->
+<section class="page-section portfolio" id="projects">
+  <div class="container">
+
+    <!-- Portfolio Section Heading -->
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Projets</h2>
+
+    <!-- Icon Divider -->
+    <div class="divider-custom">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon">
+        <fa-icon [icon]="faStar"></fa-icon>
+      </div>
+      <div class="divider-custom-line"></div>
+    </div>
+
+    <!-- Portfolio Grid Items -->
+    <div class="row">
+
+      <!-- Portfolio Item -->
+      <div class="col-md-6 col-lg-4" *ngFor="let project of projects; let i = index">
+        <div class="portfolio-item mx-auto" data-toggle="modal" [attr.data-target]="'#portfolioModal' + i">
+          <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+            <div class="portfolio-item-caption-content text-center text-white">
+              <fa-icon class="fa-3x" [icon]="faPlus"></fa-icon>
+            </div>
+          </div>
+          <img class="img-fluid" src="{{project.img}}" alt="img_{{project.title}}">
+        </div>
+      </div>
+
+      <!-- Portfolio Modal -->
+      <div *ngFor="let project of projects; let i = index" class="portfolio-modal modal fade" [attr.id]="'portfolioModal'+ i"
+            tabindex="-1" role="dialog" [attr.aria-labelledby]="'portfolioModal'+ i + 'Label'" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <fa-icon [icon]="faTimes"></fa-icon>
+          </span>
+            </button>
+            <div class="modal-body text-center">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-8">
+                    <!-- Portfolio Modal - Title -->
+                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">{{project.title}}</h2>
+                    <!-- Icon Divider -->
+                    <div class="divider-custom">
+                      <div class="divider-custom-line"></div>
+                      <div class="divider-custom-icon">
+                        <fa-icon [icon]="faStar"></fa-icon>
+                      </div>
+                      <div class="divider-custom-line"></div>
+                    </div>
+
+                    <a *ngIf="project.url !== ''" target="_blank" [href]="project.url">{{project.url}}</a>
+                    <div class="row">
+                      <div class="col mx-auto" *ngFor="let tech of project.technos">
+                        <p class="border border rounded ">{{tech}}</p>
+                      </div>
+                    </div>
+                    <!-- Portfolio Modal - Image -->
+                    <img class="img-fluid rounded mb-5" src="{{project.img}}" alt="img_project_{{project.title}}">
+                    <!-- Portfolio Modal - Text -->
+                    <p class="mb-5">{{project.description}}</p>
+                    <button class="btn btn-primary" href="#" data-dismiss="modal">
+                      <fa-icon class="fa-fw" [icon]="faTimes"></fa-icon>
+                      Close Window
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+</section>
