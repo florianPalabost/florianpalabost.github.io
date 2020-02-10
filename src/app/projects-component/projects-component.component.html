@@ -55,6 +55,11 @@
                     </div>
 
                     <a *ngIf="project.url !== ''" target="_blank" [href]="project.url">{{project.url}}</a>
+                    <div class="row">
+                      <div class="col mx-auto" *ngFor="let tech of project.technos">
+                        <p class="border border rounded ">{{tech}}</p>
+                      </div>
+                    </div>
                     <!-- Portfolio Modal - Image -->
                     <img class="img-fluid rounded mb-5" src="{{project.img}}" alt="img_project_{{project.title}}">
                     <!-- Portfolio Modal - Text -->

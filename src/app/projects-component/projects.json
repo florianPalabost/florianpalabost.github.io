@@ -1,7 +1,7 @@
 [
   {
     "title" : "minimapper",
-    "description" : "ijzefoizejfzioejfiozejfizoe",
+    "description" : "PWA réalisé dans le cadre d'un TP, grâce à l'api Navitio.io, cette appli permet de faire des itinéraires et de voir les différentes lignes TCL. ",
     "technos" : [
       "js", "vueJs", "vuex"
     ],
@@ -11,7 +11,7 @@
   },
   {
     "title" : "Portfolio",
-    "description" : "ijzefoizejfzioejfiozejfizoe",
+    "description" : "Site permettant de résumer dans un portfolio les différents projets que j'ai pu réaliser.",
     "technos" : ["js", "Angular"],
     "img" : "../assets/projects/portfolio.png",
     "url": "https://florianpalabost.github.io/",
@@ -27,7 +27,7 @@
   },
   {
     "title" : "Memory",
-    "description" : "ijzefoizejfzioejfiozejfizoe",
+    "description" : "Petite impléméntation du jeu éponyme",
     "technos" : [
       "js", "Angular"
     ],
