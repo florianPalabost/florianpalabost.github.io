@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {faDownload, faStar} from '@fortawesome/free-solid-svg-icons';
+import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-about-component',
@@ -9,6 +10,8 @@ import {faDownload, faStar} from '@fortawesome/free-solid-svg-icons';
 export class AboutComponentComponent implements OnInit {
   faDownload = faDownload;
   faStar = faStar;
+  faLinkedIn = faLinkedin;
+  faGithub = faGithub ;
 
   constructor() { }
 

@@ -17,7 +17,6 @@ export class ExperiencesComponentComponent implements OnInit {
     this.experiences = this.jsonService.getExperiences();
     this.experiences.forEach((exp) => {
       exp.annee = new Date(exp.year).toLocaleDateString();
-      console.log(exp.annee);
     });
   }
 

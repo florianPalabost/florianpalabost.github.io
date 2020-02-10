@@ -13,6 +13,7 @@ import { AboutComponentComponent } from './about-component/about-component.compo
 import {HttpClientModule} from '@angular/common/http';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {VerticalTimelineModule} from 'angular-vertical-timeline';
+import { ContactComponentComponent } from './contact-component/contact-component.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {VerticalTimelineModule} from 'angular-vertical-timeline';
     EducationsComponentComponent,
     InterestsComponentComponent,
     FooterComponentComponent,
-    AboutComponentComponent
+    AboutComponentComponent,
+    ContactComponentComponent
   ],
   imports: [
     BrowserModule,

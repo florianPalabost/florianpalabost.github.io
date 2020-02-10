@@ -13,9 +13,17 @@
     "title" : "Portfolio",
     "description" : "ijzefoizejfzioejfiozejfizoe",
     "technos" : ["js", "Angular"],
-    "img" : "",
-    "url": "",
+    "img" : "../assets/projects/portfolio.png",
+    "url": "https://florianpalabost.github.io/",
     "anneeReal": "2020"
+  },
+  {
+    "title" : "Chronos",
+    "description" : "Appli comprenant plusieurs chronos réalisé pour un escape game",
+    "technos" : ["js", "Angular"],
+    "img" : "../assets/projects/chronos.png",
+    "url": "http://chronos-app.surge.sh/",
+    "anneeReal": "2019"
   },
   {
     "title" : "Memory",

@@ -14,7 +14,6 @@ export class SkillsComponentComponent implements OnInit {
 
   ngOnInit() {
     this.skills = this.jsonService.getSkills().shift();
-    console.log(this.skills);
   }
 
 }

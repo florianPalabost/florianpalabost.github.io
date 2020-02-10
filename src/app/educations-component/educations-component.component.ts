@@ -18,7 +18,6 @@ export class EducationsComponentComponent implements OnInit {
     this.educations = this.jsonService.getEducations();
     this.educations.forEach((edu) => {
       edu.annee = new Date(edu.year).toLocaleDateString();
-      console.log(edu.annee);
     });
   }
 
