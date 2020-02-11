@@ -28,7 +28,8 @@
           <fa-icon [icon]="faGithub" [styles]="{'stroke': 'white'}" size="2x"></fa-icon>
         </a>
       </p>
-      <a class="btn btn-xl btn-outline-light" download="cv_florian.pdf" target="_blank" href="/assets/cv_florian.pdf">
+<!--      <a class="btn btn-xl btn-outline-light" download="cv_florian.pdf" target="_blank" href="https://florianpalabost.surge.sh/assets/cv_florian.pdf">-->
+      <a class="btn btn-xl btn-outline-light" target="_blank" (click)="downloadPdf()">
         <fa-icon class="mr-2" [icon]="faDownload"></fa-icon>
         Download CV
       </a>

@@ -27,6 +27,7 @@
     "angular-vertical-timeline": "^0.6.0",
     "bootstrap": "^4.4.1",
     "core-js": "^2.5.4",
+    "darkmode-js": "^1.5.5",
     "file-saver": "^2.0.2",
     "fontawesome": "^5.6.3",
     "jquery": "^3.4.1",
