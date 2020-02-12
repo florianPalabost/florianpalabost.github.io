@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {faDownload, faStar} from '@fortawesome/free-solid-svg-icons';
+import {faDownload, faEnvelope, faStar} from '@fortawesome/free-solid-svg-icons';
 import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 declare var require: any;
 const FileSaver = require('file-saver');
@@ -14,6 +14,7 @@ export class AboutComponentComponent implements OnInit {
   faStar = faStar;
   faLinkedIn = faLinkedin;
   faGithub = faGithub ;
+  faEnvelope = faEnvelope;
 
   constructor() { }
 
