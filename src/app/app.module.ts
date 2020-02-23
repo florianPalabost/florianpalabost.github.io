@@ -14,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {VerticalTimelineModule} from 'angular-vertical-timeline';
 import { ContactComponentComponent } from './contact-component/contact-component.component';
+import {FileSaverModule} from 'ngx-filesaver';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ContactComponentComponent } from './contact-component/contact-component
     BrowserModule,
     HttpClientModule,
     FontAwesomeModule,
-    VerticalTimelineModule
+    VerticalTimelineModule,
+    FileSaverModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

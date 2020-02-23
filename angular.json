@@ -19,6 +19,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
+              { "glob": "**/*", "input": "node_modules/ng2-pdfjs-viewer/pdfjs", "output": "/assets/pdfjs" },
               "src/favicon.ico",
               "src/assets"
             ],
@@ -64,7 +65,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "portfolio:build"
+            "browserTarget": "portfolio:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {

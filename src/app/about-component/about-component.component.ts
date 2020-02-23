@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {faDownload, faEnvelope, faStar} from '@fortawesome/free-solid-svg-icons';
 import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {FileSaverService} from 'ngx-filesaver';
 declare var require: any;
 const FileSaver = require('file-saver');
 
@@ -16,14 +18,31 @@ export class AboutComponentComponent implements OnInit {
   faGithub = faGithub ;
   faEnvelope = faEnvelope;
 
-  constructor() { }
+  constructor(private http: HttpClient, private _FileSaverService: FileSaverService) { }
 
   ngOnInit() {
   }
 
   downloadPdf() {
-    const pdfUrl = 'assets/cv_florian.pdf';
+    const pdfUrl = 'https://docdro.id/rq7BVmu';
     const pdfName = 'cv_florian.pdf';
-    FileSaver.saveAs(pdfUrl, pdfName);
+
+    // window.open('./assets/cv_florian.pdf',);
+    // todo test with a route & routerlink in html !!!
+    // todo next : if doesnt work test with lib viewpdf
+    // const filePDF = open(pdfUrl);
+    // return FileSaver.saveAs(filePDF, pdfName);
+
+    const httpOptions : any    = {
+      headers: new HttpHeaders({
+        'Access-Control-Allow-Origin': 'https://docdro.id',
+      })
+        // responseType: 'blob'
+    };
+
+    this.http.get('https://docdro.id/rq7BVmu', httpOptions).subscribe(res => {
+      this._FileSaverService.save((<any>res)._body, pdfName);
+    });
+
   }
 }

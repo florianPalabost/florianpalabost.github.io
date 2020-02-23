@@ -1,0 +1,7 @@
+{
+  "https://docdro.id/*": {
+    "target": "https://docdro.id",
+    "secure": true,
+    "logLevel": "debug"
+  }
+}
