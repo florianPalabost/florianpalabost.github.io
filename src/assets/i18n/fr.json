@@ -1,0 +1,93 @@
+{
+  "default": {
+    "language": "Langue"
+  },
+  "nav": {
+    "projects": "Projects",
+    "experiences": "Experiences",
+    "skills": "Compétences",
+    "education": "Formation",
+    "interests": "Interêts",
+    "contact": "Contact"
+  },
+  "about": {
+    "hello": "Bonjour, je suis Florian",
+    "job": "Développeur Web Junior",
+    "download": "Télécharger CV",
+    "contact": "Me contacter"
+  },
+  "projects": {
+    "titleSection": "Projets",
+    "data": [
+      {
+        "title" : "Minimapper",
+        "description" : "PWA réalisé dans le cadre d'un TP, grâce à l'api Navitio.io, cette appli permet de faire des itinéraires et de voir les différentes lignes TCL. ",
+        "technos" : [
+          "js", "vueJs", "vuex"
+        ],
+        "img" : "../assets/projects/minimapper.png",
+        "url": "",
+        "anneeReal": "2017"
+      },
+      {
+        "title" : "Portfolio",
+        "description" : "Site permettant de résumer dans un portfolio les différents projets que j'ai pu réaliser.",
+        "technos" : ["js", "Angular"],
+        "img" : "../assets/projects/portfolio.png",
+        "url": "https://florianpalabost.github.io/",
+        "anneeReal": "2020"
+      },
+      {
+        "title" : "BEA Raphaël PISTILLI",
+        "description" : "Site vitrine présentant les différents projets réalisés",
+        "technos" : ["PHP", "Laravel", "HTML", "CSS", "JS", "jQuery"],
+        "img" : "../assets/projects/raphaelpistilli_1.png",
+        "url": "https://raphaelpistilli.fr/",
+        "anneeReal": "2017"
+      },
+      {
+        "title" : "Chronos",
+        "description" : "Appli comprenant plusieurs chronos réalisé pour un escape game",
+        "technos" : ["js", "Angular"],
+        "img" : "../assets/projects/chronos.png",
+        "url": "http://chronos-app.surge.sh/",
+        "anneeReal": "2019"
+      },
+      {
+        "title" : "Memory",
+        "description" : "Petite impléméntation du jeu éponyme",
+        "technos" : [
+          "js", "Angular"
+        ],
+        "img" : "../assets/projects/memory.png",
+        "url": "https://minimemory.surge.sh",
+        "anneeReal": "2020"
+      }
+    ]
+  },
+  "experiences": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "skills": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "education": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "interests": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "contact": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "footer": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  }
+
+}

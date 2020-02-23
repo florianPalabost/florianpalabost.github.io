@@ -3,6 +3,7 @@ import 'magnific-popup';
 import {faChevronUp} from '@fortawesome/free-solid-svg-icons';
 declare  var jQuery:  any;
 import Darkmode from 'darkmode-js';
+import {TranslateService} from '@ngx-translate/core';
 
 
 @Component({
@@ -12,6 +13,8 @@ import Darkmode from 'darkmode-js';
 })
 export class AppComponent implements OnInit {
   faChevronUp = faChevronUp;
+
+  constructor(private translate: TranslateService) {}
 
   ngOnInit(): void {
     const options = {
@@ -30,6 +33,11 @@ export class AppComponent implements OnInit {
     new Darkmode(options).showWidget();
     (function($) {
       'use strict'; // Start of use strict
+
+      // const btn = document.querySelector('.darkmode-toggle');
+      //
+      // btn.setAttribute('style', 'z-index: 100;');
+
 
       // Smooth scrolling using jQuery easing
       $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {

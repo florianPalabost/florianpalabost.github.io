@@ -17,3 +17,8 @@
 @import "assets/scss/layout/portfolio.scss";
 @import "assets/scss/layout/contact.scss";
 @import "assets/scss/layout/footer.scss";
+
+// darkmode btn fix z-index
+.darkmode-toggle {
+  z-index: 100;
+}

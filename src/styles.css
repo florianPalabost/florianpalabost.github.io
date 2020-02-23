@@ -10148,4 +10148,8 @@ form .row:first-child .floating-label-form-group {
   background-color: #1a252f;
 }
 
+.darkmode-toggle {
+  z-index: 100;
+}
+
 /*# sourceMappingURL=styles.css.map */

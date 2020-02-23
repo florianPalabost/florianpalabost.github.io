@@ -8,22 +8,31 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projets</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">{{'nav.projects' | translate}}</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#experiences">Expériences</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#experiences">{{'nav.experiences' | translate}}</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">Skills</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#skills">{{'nav.skills' | translate}}</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#education">Formations</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#education">{{'nav.education' | translate}}</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#interests">Loisirs</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#interests">{{'nav.interests' | translate}}</a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
-          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">{{'nav.contact' | translate}}</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{'default.language' | translate}} <span class="caret"></span></a>
+          <ul class="dropdown-menu text-center" role="menu">
+            <li><a href="#" (click)="useLanguage('fr')" class="language" rel="fr"><img class="flag" src="assets/img/fr.png" />FR</a></li>
+            <li><a href="#" (click)="useLanguage('en')" class="language" rel="en"><img class="flag" src="assets/img/en.png" />EN</a></li>
+          </ul>
         </li>
       </ul>
     </div>

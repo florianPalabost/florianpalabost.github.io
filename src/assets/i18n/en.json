@@ -1,0 +1,93 @@
+{
+  "default": {
+    "language": "Language"
+  },
+  "nav": {
+    "projects": "Projects",
+    "experiences": "Experiences",
+    "skills": "Skills",
+    "education": "Education",
+    "interests": "Interests",
+    "contact": "Contact"
+  },
+  "about": {
+    "hello": "Hi, I'm Florian",
+    "job": "Web Developer Junior",
+    "download": "Download CV",
+    "contact": "Contact Me"
+  },
+  "projects": {
+    "titleSection": "Projects",
+    "data": [
+      {
+        "title" : "Minimapper",
+        "description" : "PWA realized for a TP with api Navitio.io. We can do do iterate and see TCL ligns. ",
+        "technos" : [
+          "js", "vueJs", "vuex"
+        ],
+        "img" : "../assets/projects/minimapper.png",
+        "url": "",
+        "anneeReal": "2017"
+      },
+      {
+        "title" : "Portfolio",
+        "description" : "Resume in a portfolio site with the differents projects I do.",
+        "technos" : ["js", "Angular"],
+        "img" : "../assets/projects/portfolio.png",
+        "url": "https://florianpalabost.github.io/",
+        "anneeReal": "2020"
+      },
+      {
+        "title" : "BEA Raphaël PISTILLI",
+        "description" : "Vitrine site with the differents projects realized",
+        "technos" : ["PHP", "Laravel", "HTML", "CSS", "JS", "jQuery"],
+        "img" : "../assets/projects/raphaelpistilli_1.png",
+        "url": "https://raphaelpistilli.fr/",
+        "anneeReal": "2017"
+      },
+      {
+        "title" : "Chronos",
+        "description" : "App with 4 chronos for an escape game",
+        "technos" : ["js", "Angular"],
+        "img" : "../assets/projects/chronos.png",
+        "url": "http://chronos-app.surge.sh/",
+        "anneeReal": "2019"
+      },
+      {
+        "title" : "Memory",
+        "description" : "Little implementation of the eponyme game",
+        "technos" : [
+          "js", "Angular"
+        ],
+        "img" : "../assets/projects/memory.png",
+        "url": "https://minimemory.surge.sh",
+        "anneeReal": "2020"
+      }
+    ]
+  },
+  "experiences": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "skills": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "education": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "interests": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "contact": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "footer": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  }
+
+}
