@@ -1,6 +1,6 @@
 [
   {
-    "title" : "minimapper",
+    "title" : "Minimapper",
     "description" : "PWA réalisé dans le cadre d'un TP, grâce à l'api Navitio.io, cette appli permet de faire des itinéraires et de voir les différentes lignes TCL. ",
     "technos" : [
       "js", "vueJs", "vuex"

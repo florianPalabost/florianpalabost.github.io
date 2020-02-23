@@ -3,7 +3,7 @@
   <div class="container-fluid">
 
     <!-- Portfolio Section Heading -->
-    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Projets</h2>
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{'projects.titleSection' | translate}}</h2>
 
     <!-- Icon Divider -->
     <div class="divider-custom">
@@ -35,7 +35,7 @@
               <p class="border border rounded ">{{tech}}</p>
             </div>
           </div>
-          <p class="mb-5">{{project.description}}</p>
+          <p class="mb-5">{{'projects.' + project.title | translate}}</p>
 
         </div>
 
