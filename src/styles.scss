@@ -22,3 +22,7 @@
 .darkmode-toggle {
   z-index: 100;
 }
+// fix horizotally scroll bar which is needless
+body {
+  overflow-x: hidden;
+}

@@ -10152,4 +10152,8 @@ form .row:first-child .floating-label-form-group {
   z-index: 100;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /*# sourceMappingURL=styles.css.map */
