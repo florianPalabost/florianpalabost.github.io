@@ -14,12 +14,12 @@
     "description" : "Site permettant de résumer dans un portfolio les différents projets que j'ai pu réaliser.",
     "technos" : ["js", "Angular"],
     "img" : "../assets/projects/portfolio.png",
-    "url": "https://florianpalabost.github.io/",
+    "url": "https://florianpalabost.surge.sh/",
     "anneeReal": "2020"
   },
   {
     "title" : "BEA Raphaël PISTILLI",
-    "description" : "Site vitrine présentant les différents projets réalisés",
+    "description" : "Site vitrine présentant les différents   projets réalisés",
     "technos" : ["PHP", "Laravel", "HTML", "CSS", "JS", "jQuery"],
     "img" : "../assets/projects/raphaelpistilli_1.png",
     "url": "https://raphaelpistilli.fr/",

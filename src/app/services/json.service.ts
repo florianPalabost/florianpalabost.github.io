@@ -17,10 +17,6 @@ export class JsonService {
   constructor(private translate: TranslateService) { }
 
   getProjects() {
-    this.projectsList.forEach((project) => {
-      console.log(project.title);
-      console.log( this.translate.get("projects." + project.title));
-    });
     return this.projectsList;
   }
 

@@ -26,6 +26,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@ngx-translate/core": "^12.1.1",
     "@ngx-translate/http-loader": "^4.0.0",
+    "@types/jquery": "^3.3.33",
     "angular-scroll": "^1.0.2",
     "angular-vertical-timeline": "^0.6.0",
     "bootstrap": "^4.4.1",

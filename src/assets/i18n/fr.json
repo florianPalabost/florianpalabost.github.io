@@ -22,7 +22,7 @@
     "Portfolio" : "Site permettant de résumer dans un portfolio les différents projets que j'ai pu réaliser.",
     "BEA Raphaël PISTILLI" : "Site vitrine présentant les différents projets réalisés",
     "Chronos" : "Appli comprenant plusieurs chronos réalisé pour un escape game",
-    "Memory" : "Petite impléméntation du jeu éponyme"
+    "Memory" : "Petite implémentation du jeu éponyme"
   },
   "experiences": {
     "TITLE": "Hello Angular with ngx-translate!",

@@ -18,11 +18,11 @@
   },
   "projects": {
     "titleSection": "Projects",
-    "Minimapper" : "PWA realized for a TP, grâce à l'api Navitio.io, cette appli permet de faire des itinéraires et de voir les différentes lignes TCL. ",
-    "Portfolio" : "Site permettant de résumer dans un portfolio les différents projets que j'ai pu réaliser.",
-    "BEA Raphaël PISTILLI" : "Site vitrine présentant les différents projets réalisés",
-    "Chronos" : "Appli comprenant plusieurs chronos réalisé pour un escape game",
-    "Memory" : "Petite impléméntation du jeu éponyme"
+    "Minimapper" : "PWA realized for a TP  with API Navitio.io. With this app we can itinerate and see the differents TCL ligns. ",
+    "Portfolio" : "Portfolio website with my differents projects.",
+    "BEA Raphaël PISTILLI" : "Website vitrine with the differents projects realized",
+    "Chronos" : "App with few chronos realized for an escape game",
+    "Memory" : "Little implementation of the eponyme game"
   },
   "experiences": {
     "TITLE": "Hello Angular with ngx-translate!",
