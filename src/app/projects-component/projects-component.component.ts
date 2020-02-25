@@ -18,11 +18,26 @@ export class ProjectsComponentComponent implements OnInit {
   ngOnInit() {
     this.projects = this.jsonService.getProjects();
 
-    // document.ready is deprecated, now we use this method
-    // besides if magnificPopup is not recognize (ex : "property not found"), declare new file typing.d.ts and declare the method in it
-    $(function() {
-      $('.magnific-image').magnificPopup({type:'image'});
-    });
+    // tips: document.ready is deprecated, now we use this method
+    // tips: besides if magnificPopup is not recognize (ex : "property not found"), declare new file typing.d.ts and declare the method in it
+this.projects.forEach((project) => {
+  let imgSrc = [];
+  project.img.forEach((img) => {
+    imgSrc.push({src: img});
+  });
+
+  $(function() {
+    $('#magnific-image-' + project.id).magnificPopup(
+      {
+        items: imgSrc,
+        type:'image',
+        gallery: {
+          enabled: true
+        },
+      });
+  });
+});
+
 
 
   }

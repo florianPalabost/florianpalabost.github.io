@@ -3,11 +3,11 @@
     "language": "Langue"
   },
   "nav": {
-    "projects": "Projects",
-    "experiences": "Experiences",
+    "projects": "Projets",
+    "experiences": "Expériences",
     "skills": "Compétences",
     "education": "Formation",
-    "interests": "Interêts",
+    "interests": "Intérêts",
     "contact": "Contact"
   },
   "about": {
@@ -17,11 +17,10 @@
     "contact": "Me contacter"
   },
   "projects": {
-    "titleSection": "Projets",
-    "Minimapper" : "PWA réalisé dans le cadre d'un TP, grâce à l'api Navitio.io, cette appli permet de faire des itinéraires et de voir les différentes lignes TCL. ",
+    "Minimapper" : "PWA réalisée dans le cadre d'un TP, grâce à l'api Navitio.io, cette appli permet de faire des itinéraires et de voir les différentes lignes TCL. ",
     "Portfolio" : "Site permettant de résumer dans un portfolio les différents projets que j'ai pu réaliser.",
     "BEA Raphaël PISTILLI" : "Site vitrine présentant les différents projets réalisés",
-    "Chronos" : "Appli comprenant plusieurs chronos réalisé pour un escape game",
+    "Chronos" : "Appli comprenant plusieurs chronos réalisée pour un escape game",
     "Memory" : "Petite implémentation du jeu éponyme"
   },
   "experiences": {
@@ -37,8 +36,8 @@
     "SELECT": "Change language"
   },
   "interests": {
-    "TITLE": "Hello Angular with ngx-translate!",
-    "SELECT": "Change language"
+    "veilleTech": "Veille technologique",
+    "videoGame": "Jeux vidéo"
   },
   "contact": {
     "TITLE": "Hello Angular with ngx-translate!",

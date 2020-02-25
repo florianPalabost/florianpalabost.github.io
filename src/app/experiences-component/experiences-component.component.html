@@ -1,5 +1,5 @@
 <section class="page-section" id="experiences">
-  <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Expériences professionelles</h2>
+  <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{'nav.experiences' | translate}}</h2>
 
   <!-- Icon Divider -->
   <div class="divider-custom">
@@ -13,9 +13,9 @@
   <vertical-timeline>
     <vertical-timeline-card *ngFor='let entry of experiences;let i = index' [timeString]="entry.year" [dateValue]="entry.annee">
       <div class="container" [ngClass]="{ left: i%2!==0, right:i%2==0}">
-          <h2>{{entry.entreprise}}</h2>
-          <h3>[{{entry.contrat}}] {{entry.poste}}</h3>
-          <p>{{entry.technos}}</p>
+          <h3>{{entry.entreprise}}</h3>
+          <h4>[{{entry.contrat}}] {{entry.poste}}</h4>
+          <p class="font-italic">{{entry.technos}}</p>
           <p>{{entry.description}}</p>
       </div>
     </vertical-timeline-card>

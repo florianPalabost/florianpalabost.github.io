@@ -17,7 +17,6 @@
     "contact": "Contact Me"
   },
   "projects": {
-    "titleSection": "Projects",
     "Minimapper" : "PWA realized for a TP  with API Navitio.io. With this app we can itinerate and see the differents TCL ligns. ",
     "Portfolio" : "Portfolio website with my differents projects.",
     "BEA Raphaël PISTILLI" : "Website vitrine with the differents projects realized",
@@ -37,8 +36,8 @@
     "SELECT": "Change language"
   },
   "interests": {
-    "TITLE": "Hello Angular with ngx-translate!",
-    "SELECT": "Change language"
+    "veilleTech": "Technological watch",
+    "videoGame": "Video Games"
   },
   "contact": {
     "TITLE": "Hello Angular with ngx-translate!",

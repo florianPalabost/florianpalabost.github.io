@@ -3,7 +3,7 @@
   <div class="container-fluid">
 
     <!-- Portfolio Section Heading -->
-    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{'projects.titleSection' | translate}}</h2>
+    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{'nav.projects' | translate}}</h2>
 
     <!-- Icon Divider -->
     <div class="divider-custom">
@@ -17,8 +17,8 @@
     <!--  Projects are inversed (left || right) -->
       <div class="row" [ngClass]="(i % 2 == 0) ? 'flex-row' : 'flex-row-reverse'" *ngFor="let project of projects; let i = index">
         <div class="col-6 px-0 img-container">
-          <a [href]="project.img" class="magnific-image">
-            <img class="h-30 mx-auto card-img-top card-img-top-a " src="{{ project.img }}" alt="img{{ project.title }}">
+          <a  id="magnific-image-{{project.id}}">
+            <img class="h-30 mx-auto card-img-top card-img-top-a " src="{{ project.img[0] }}" alt="img{{ project.title }}">
             <div class="overlay mx-auto">
               <fa-icon class="fa fa-play-circle-o fa-4x fa-3x" [icon]="faPlus" ></fa-icon>
             </div>
