@@ -6,7 +6,7 @@
     <img class="rounded-circle masthead-avatar mb-5" src="assets/profil.png" alt="profil">
 
     <!-- Masthead Heading -->
-    <h1 class="masthead-heading text-uppercase mb-0"> {{'about.hello' | translate}}</h1>
+    <h1 class="masthead-heading text-uppercase mb-0 text-dark"> {{'about.hello' | translate}}</h1>
 
     <!-- Icon Divider -->
     <div class="divider-custom divider-light">
@@ -18,23 +18,23 @@
     </div>
 
     <!-- Masthead Subheading -->
-    <p class="masthead-subheading font-weight-light mb-0 font-weight-bolder"> {{'about.job' | translate}}</p>
+    <p class="masthead-subheading font-weight-light mb-0 font-weight-bolder text-dark"> {{'about.job' | translate}}</p>
     <div class="text-center mt-4">
       <p>
-        <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="https://www.linkedin.com/in/florian-palabost-881711b4/">
-        <fa-icon [icon]="faLinkedIn" [styles]="{'stroke': 'white'}" size="2x"></fa-icon>
+        <a class="btn btn-outline-dark btn-social mx-1" target="_blank" href="https://www.linkedin.com/in/florian-palabost-881711b4/">
+        <fa-icon [icon]="faLinkedIn" [styles]="{'stroke': 'black'}" size="2x"></fa-icon>
       </a>
-        <a class="btn btn-outline-light btn-social mx-1" target="_blank" href="https://github.com/florianPalabost">
-          <fa-icon [icon]="faGithub" [styles]="{'stroke': 'white'}" size="2x"></fa-icon>
+        <a class="btn btn-outline-dark btn-social mx-1" target="_blank" href="https://github.com/florianPalabost">
+          <fa-icon [icon]="faGithub" [styles]="{'stroke': 'black'}" size="2x"></fa-icon>
         </a>
       </p>
 
-      <a class="btn btn-xl btn-outline-light" target="_blank" href="https://docdro.id/rq7BVmu">
+      <a class="btn btn-xl black" target="_blank" href="https://docdro.id/rq7BVmu">
         <fa-icon class="mr-2" [icon]="faDownload"></fa-icon>
         {{'about.download' | translate}}
       </a>
-      <a class="btn btn-xl btn-outline-light ml-3" href="#contact">
-        <fa-icon class="mr-2" [icon]="faEnvelope"></fa-icon>
+      <a class="btn btn-xl btn-outline-black ml-3" href="#contact">
+        <fa-icon class="mr-2" [styles]="{'stroke': 'black'}" [icon]="faEnvelope"></fa-icon>
         {{'about.contact' | translate}}
       </a>
 
