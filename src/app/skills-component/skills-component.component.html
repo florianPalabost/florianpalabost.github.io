@@ -10,30 +10,47 @@
     <div class="divider-custom-line"></div>
   </div>
 
+  <!--todo make this code more generic because it repeat 4 times !-->
   <div class="row mx-auto text-uppercase">
-    <div class="col-md-3 col-lg-3">
+    <div class="col-12 col-md-3 col-lg-3 mt-sm-5">
       <h3>Backend</h3>
-        <ul>
-          <li class="list-unstyled" *ngFor="let skill of skills['backend']"><span class="mt-5">{{skill}}</span></li>
-        </ul>
+      <div class="row">
+        <div class="col-4 mx-auto" *ngFor="let skill of skills['backend'] | keyvalue">
+          <img src="{{skill.value}}" alt="logo_{{skill.key}}" data-toggle="popover" data-trigger="hover"
+               data-placement="top" data-title="{{skill.key}}" data-content=" ">
+        </div>
+      </div>
+
     </div>
-    <div class="col-md-3 col-lg-3">
+    <div class="col-12 col-md-3 col-lg-3 mt-sm-5">
       <h3>Frontend</h3>
-      <ul>
-        <li class="list-unstyled" *ngFor="let skill of skills['frontend']"><span class="mt-5">{{skill}}</span></li>
-      </ul>
+      <div class="row">
+        <div class="col-4 mx-auto" *ngFor="let skill of skills['frontend'] | keyvalue">
+          <img src="{{skill.value}}" alt="logo_{{skill.key}}" data-toggle="popover" data-trigger="hover"
+               data-placement="top" data-title="{{skill.key}}" data-content=" ">
+        </div>
+      </div>
+
     </div>
-    <div class="col-md-3 col-lg-3">
+    <div class="col-12 col-md-3 col-lg-3 mt-sm-5">
       <h3>BDD</h3>
-      <ul>
-        <li class="list-unstyled " *ngFor="let skill of skills['bdd']"><span class="mt-5">{{skill}}</span></li>
-      </ul>
+      <div class="row">
+        <div class="col-4 mx-auto" *ngFor="let skill of skills['bdd'] | keyvalue">
+          <img src="{{skill.value}}" alt="logo_{{skill.key}}" data-toggle="popover" data-trigger="hover"
+               data-placement="top" data-title="{{skill.key}}" data-content=" ">
+        </div>
+      </div>
+
     </div>
-    <div class="col-md-3 col-lg-3">
+    <div class="col-12 col-md-3 col-lg-3 mt-sm-5">
       <h3>Autres</h3>
-      <ul>
-        <li class="list-unstyled " *ngFor="let skill of skills['others']"><span class="mt-5">{{skill}}</span></li>
-      </ul>
+      <div class="row">
+        <div class="col-4 mx-auto" *ngFor="let skill of skills['others'] |keyvalue">
+          <img src="{{skill.value}}" alt="logo_{{skill.key}}" data-toggle="popover" data-trigger="hover"
+               data-placement="top" data-title="{{skill.key}}" data-content=" ">
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

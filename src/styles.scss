@@ -26,14 +26,12 @@
 body {
   overflow-x: hidden;
 }
+@media (min-width: 992px) {
 
-.bg-primary {
-  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("assets/img/header.png");
-  background-position: center;
-  background-size: cover;
-
-  h1 {
-    //color: black;
+  .bg-primary {
+    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("assets/img/header.png");
+    background-position: center;
+    background-size: cover;
   }
 }
 

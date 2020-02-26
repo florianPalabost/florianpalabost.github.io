@@ -14,6 +14,9 @@ export class SkillsComponentComponent implements OnInit {
 
   ngOnInit() {
     this.skills = this.jsonService.getSkills().shift();
+    $(function () {
+      $('[data-toggle="popover"]').popover();
+    })
   }
 
 }
