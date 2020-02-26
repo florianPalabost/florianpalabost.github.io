@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
           if (target.length) {
             $('html, body').animate({
               scrollTop: (target.offset().top - 71)
-            }, 1000, 'easeInOutExpo');
+            }, 1000, 'swing');
             return false;
           }
         }
