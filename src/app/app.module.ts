@@ -7,7 +7,6 @@ import { ProjectsComponentComponent } from './projects-component/projects-compon
 import { ExperiencesComponentComponent } from './experiences-component/experiences-component.component';
 import { SkillsComponentComponent } from './skills-component/skills-component.component';
 import { EducationsComponentComponent } from './educations-component/educations-component.component';
-import { InterestsComponentComponent } from './interests-component/interests-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { AboutComponentComponent } from './about-component/about-component.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
@@ -31,7 +30,6 @@ export function createTranslateLoader(http: HttpClient) {
     ExperiencesComponentComponent,
     SkillsComponentComponent,
     EducationsComponentComponent,
-    InterestsComponentComponent,
     FooterComponentComponent,
     AboutComponentComponent,
     ContactComponentComponent
