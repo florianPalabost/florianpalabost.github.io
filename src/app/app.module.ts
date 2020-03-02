@@ -17,6 +17,8 @@ import {FileSaverModule} from 'ngx-filesaver';
 import {TranslateCompiler, TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {TranslateMessageFormatCompiler} from 'ngx-translate-messageformat-compiler';
+import {ReactiveFormsModule} from '@angular/forms';
+import {NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -51,7 +53,9 @@ export function createTranslateLoader(http: HttpClient) {
         provide: TranslateCompiler,
         useFactory: (TranslateMessageFormatCompilerFactory)
       }
-    })
+    }),
+    ReactiveFormsModule,
+    NgMultiSelectDropDownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

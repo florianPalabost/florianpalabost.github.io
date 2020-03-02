@@ -12,16 +12,16 @@
   },
   "about": {
     "hello": "Bonjour, je suis Florian",
-    "job": "Développeur Web Junior",
+    "job": "Développeur Web Freelance",
     "download": "Télécharger CV",
     "contact": "Me contacter"
   },
   "projects": {
-    "Minimapper" : "PWA réalisée dans le cadre d'un TP, grâce à l'api Navitio.io, cette appli permet de faire des itinéraires et de voir les différentes lignes TCL. ",
-    "Portfolio" : "Site permettant de résumer dans un portfolio les différents projets que j'ai pu réaliser.",
-    "BEA Raphaël PISTILLI" : "Site vitrine présentant les différents projets réalisés",
-    "Chronos" : "Appli comprenant plusieurs chronos réalisée pour un escape game",
-    "Memory" : "Petite implémentation du jeu éponyme"
+    "Minimapper": "PWA réalisée dans le cadre d'un TP, grâce à l'api Navitio.io, cette appli permet de faire des itinéraires et de voir les différentes lignes TCL. ",
+    "Portfolio": "Site permettant de résumer dans un portfolio les différents projets que j'ai pu réaliser.",
+    "BEA Raphaël PISTILLI": "Site vitrine présentant les différents projets réalisés",
+    "Chronos": "Appli comprenant plusieurs chronos réalisée pour un escape game",
+    "Memory": "Petite implémentation du jeu éponyme"
   },
   "experiences": {
     "TITLE": "Hello Angular with ngx-translate!",

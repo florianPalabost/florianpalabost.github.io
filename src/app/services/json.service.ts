@@ -31,4 +31,19 @@ export class JsonService {
   getSkills() {
     return this.skillsList;
   }
+
+  getProjectsWithTech(selectedTech: any[]) {
+    if (selectedTech.length === 0) {
+      return this.projectsList;
+    }
+
+    const projectsRes = [];
+    this.projectsList.forEach((project) => {
+      if (selectedTech.every(element => project.technos.indexOf(element) > -1)) {
+        projectsRes.push(project);
+      }
+    });
+
+    return projectsRes;
+  }
 }

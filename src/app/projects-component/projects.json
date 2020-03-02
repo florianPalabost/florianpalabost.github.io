@@ -4,7 +4,7 @@
     "title" : "Minimapper",
     "description" : "PWA réalisé dans le cadre d'un TP, grâce à l'api Navitio.io, cette appli permet de faire des itinéraires et de voir les différentes lignes TCL. ",
     "technos" : [
-      "js", "vueJs", "vuex"
+      "JS", "VueJS", "vuex"
     ],
     "img" : ["../assets/projects/minimapper.png"],
     "url": "",
@@ -14,7 +14,7 @@
     "id": "portfolio",
     "title" : "Portfolio",
     "description" : "Site permettant de résumer dans un portfolio les différents projets que j'ai pu réaliser.",
-    "technos" : ["js", "Angular"],
+    "technos" : ["JS", "Angular"],
     "img" : ["../assets/projects/portfolio.png", "../assets/projects/portfolio_1.png"],
     "url": "https://florianpalabost.surge.sh/",
     "anneeReal": "2020"
@@ -32,7 +32,7 @@
     "id": "chronos",
     "title" : "Chronos",
     "description" : "Appli comprenant plusieurs chronos réalisé pour un escape game",
-    "technos" : ["js", "Angular"],
+    "technos" : ["JS", "Angular"],
     "img" : ["../assets/projects/chronos.png"],
     "url": "http://chronos-app.surge.sh/",
     "anneeReal": "2019"
@@ -42,7 +42,7 @@
     "title" : "Memory",
     "description" : "Petite impléméntation du jeu éponyme",
     "technos" : [
-      "js", "Angular"
+      "JS", "Angular"
     ],
     "img" : ["../assets/projects/memory.png"],
     "url": "https://minimemory.surge.sh",

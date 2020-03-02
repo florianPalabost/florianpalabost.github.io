@@ -14,6 +14,21 @@
       <div class="divider-custom-line"></div>
     </div>
 
+    <!--    filter techs -->
+    <div class="row">
+      <div class="col-4 mx-auto mb-5 z-1">
+        <ng-multiselect-dropdown *ngIf="techs.length > 0"
+          [placeholder]="'Selectionnez les technologie(s) utilisée(s)...'"
+          [data]="techs"
+          [settings]="dropdownSettings"
+          (onSelect)="findProjects($event)"
+          (onDeSelect)="deleteItemFromSelected($event)"
+          (onDeSelectAll)="refreshProject()"
+        >
+        </ng-multiselect-dropdown>
+      </div>
+    </div>
+
     <!--  Projects are inversed (left || right) -->
       <div class="row" [ngClass]="(i % 2 == 0) ? 'flex-row' : 'flex-row-reverse'" *ngFor="let project of projects; let i = index">
         <div class="col-6 px-0 img-container">
@@ -23,7 +38,6 @@
               <fa-icon class="fa fa-play-circle-o fa-4x fa-3x" [icon]="faPlus" ></fa-icon>
             </div>
           </a>
-
 
         </div>
         <div class="col-6 text-center px-0">
@@ -42,7 +56,7 @@
               <span class="ml-3 list-inline font-italic" *ngFor="let tech of project.technos">{{tech}}</span>
             </div>
           </div>
-          <p class="mb-5">{{'projects.' + project.title | translate}}</p>
+          <p class="mt-4 mb-5 w-75 mx-auto">{{'projects.' + project.title | translate}}</p>
         </div>
 
     </div>

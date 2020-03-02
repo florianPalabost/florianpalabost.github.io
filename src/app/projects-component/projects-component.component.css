@@ -30,4 +30,8 @@
   cursor: pointer;
 }
 
+.z-1 {
+  z-index: 1;
+}
+
 /*# sourceMappingURL=projects-component.component.css.map */
