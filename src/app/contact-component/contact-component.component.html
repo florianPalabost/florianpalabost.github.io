@@ -10,6 +10,31 @@
     <div class="divider-custom-line"></div>
   </div>
 
+  <div class="row">
+    <div class="col-8 mx-auto">
+      <form [formGroup]="formContact" id="contact-form">
+        <input type="hidden" formControlName="contact_number" name="contact_number">
+        <div class="row">
+          <div class="form-group col-6">
+            <label class="float-left">Name</label>
+            <input class="form-control" type="text" formControlName="user_name" name="user_name" required="required" placeholder="Your name">
+          </div>
+          <div class="form-group col-6">
+            <label class="float-left">Email</label>
+            <input class="form-control" type="email" formControlName="user_email" name="user_email" required="required" placeholder="example@email.fr">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-12">
+            <label class="float-left">Message</label>
+            <textarea rows=6 class="form-control" formControlName="message" name="message" required="required" placeholder="Enter you message content here..."></textarea>
+          </div>
+        </div>
+
+        <button class="btn btn-primary mb-5" (click)="sendMsg()">Envoyer</button>
+      </form>
+    </div>
+  </div>
   <div class="row text-center">
     <div class="col-3"></div>
     <div class="col-3 mx-auto">

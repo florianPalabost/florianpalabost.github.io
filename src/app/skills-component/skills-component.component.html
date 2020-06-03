@@ -14,40 +14,36 @@
   <div class="row mx-auto text-uppercase">
     <div class="col-12 col-md-3 col-lg-3 mt-sm-5">
       <h3>Backend</h3>
-      <div class="row">
-        <div class="col-4 mx-auto" *ngFor="let skill of skills['backend'] | keyvalue">
-          <img src="{{skill.value}}" alt="logo_{{skill.key}}" data-toggle="popover" data-trigger="hover"
-               data-placement="top" data-title="{{skill.key}}" data-content=" ">
+      <div class="col">
+        <div class="col mx-auto" *ngFor="let skill of skills['backend'] | keyvalue">
+          <p>{{skill.key}}</p>
         </div>
       </div>
 
     </div>
     <div class="col-12 col-md-3 col-lg-3 mt-sm-5">
       <h3>Frontend</h3>
-      <div class="row">
-        <div class="col-4 mx-auto" *ngFor="let skill of skills['frontend'] | keyvalue">
-          <img src="{{skill.value}}" alt="logo_{{skill.key}}" data-toggle="popover" data-trigger="hover"
-               data-placement="top" data-title="{{skill.key}}" data-content=" ">
+      <div class="col">
+        <div class="col mx-auto" *ngFor="let skill of skills['frontend'] | keyvalue">
+          <p>{{skill.key}}</p>
         </div>
       </div>
 
     </div>
     <div class="col-12 col-md-3 col-lg-3 mt-sm-5">
       <h3>BDD</h3>
-      <div class="row">
-        <div class="col-4 mx-auto" *ngFor="let skill of skills['bdd'] | keyvalue">
-          <img src="{{skill.value}}" alt="logo_{{skill.key}}" data-toggle="popover" data-trigger="hover"
-               data-placement="top" data-title="{{skill.key}}" data-content=" ">
+      <div class="col">
+        <div class="col mx-auto" *ngFor="let skill of skills['bdd'] | keyvalue">
+          <p>{{skill.key}}</p>
         </div>
       </div>
 
     </div>
     <div class="col-12 col-md-3 col-lg-3 mt-sm-5">
-      <h3>Autres</h3>
+      <h3>Tools</h3>
       <div class="row">
-        <div class="col-4 mx-auto" *ngFor="let skill of skills['others'] |keyvalue">
-          <img src="{{skill.value}}" alt="logo_{{skill.key}}" data-toggle="popover" data-trigger="hover"
-               data-placement="top" data-title="{{skill.key}}" data-content=" ">
+        <div class="col mx-auto" *ngFor="let skill of skills['others'] | keyvalue">
+            <p>{{skill.key}}</p>
         </div>
       </div>
 

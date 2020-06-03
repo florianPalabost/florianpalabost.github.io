@@ -4,3 +4,8 @@ My Portfolio site build with Angular
 ````
 npm install
 ````
+- edit environments/environment.ts
+````
+user_id: 'YOUR_USER_ID'
+````
+
