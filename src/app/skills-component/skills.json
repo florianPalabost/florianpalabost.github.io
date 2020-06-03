@@ -5,13 +5,16 @@
       "Docker": "https://img.icons8.com/color/48/000000/docker.png",
       "Drupal 8": "https://img.icons8.com/color/48/000000/drupal.png",
       "Node.JS": "https://img.icons8.com/color/48/000000/nodejs.png",
-      "Laravel": "https://img.icons8.com/windows/64/000000/laravel.png"
+      "Laravel": "https://img.icons8.com/windows/64/000000/laravel.png",
+      "Microservices": "https://img.icons8.com/windows/64/000000/laravel.png",
+      "REST APIs": "https://img.icons8.com/windows/64/000000/laravel.png"
     },
     "frontend": {
       "Angular": "https://img.icons8.com/color/48/000000/angularjs.png",
       "HTML": "https://img.icons8.com/color/48/000000/html-5.png",
       "CSS": "https://img.icons8.com/color/48/000000/css3.png",
-      "JavaScript": "https://img.icons8.com/color/48/000000/javascript.png"
+      "JavaScript": "https://img.icons8.com/color/48/000000/javascript.png",
+      "jQuery": "https://img.icons8.com/color/48/000000/javascript.png"
     },
     "bdd": {
       "SQL": "https://img.icons8.com/dotty/80/000000/sql.png",
@@ -19,7 +22,11 @@
       "PostgreSQL": "https://img.icons8.com/material/48/000000/postgreesql.png"
     },
     "others": {
-      "GIT": "https://img.icons8.com/metro/52/000000/github.png"
+      "Git": "https://img.icons8.com/metro/52/000000/github.png",
+      "Github": "https://img.icons8.com/metro/52/000000/github.png",
+      "Gitlab": "https://img.icons8.com/metro/52/000000/github.png",
+      "VS Code": "https://img.icons8.com/metro/52/000000/github.png",
+      "PHP Storm": "https://img.icons8.com/metro/52/000000/github.png"
     }
   }
 
