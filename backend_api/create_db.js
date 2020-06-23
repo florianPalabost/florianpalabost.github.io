@@ -1,16 +1,14 @@
-// FOR NOW, NEED TO CREATE MANUALLY THE DATABASE animes_api 
-
 const pg = require('pg');
 const dotenv = require('dotenv');
 
 dotenv.config();
-const Pool = pg.Pool
+const Pool = pg.Pool;
 const pool = new Pool({
   user: process.env.POSTGRES_USER || 'postgres',
   host: process.env.POSTGRES_HOST || 'localhost',
-  database: process.env.POSTGRES_DB || 'animes_api',
+  database: process.env.POSTGRES_DB || 'projects_portfolio',
   password: process.env.POSTGRES_PWD,
-  port: process.env.POSTGRES_PORT || '5432',
+  port: process.env.POSTGRES_PORT || '5432'
 });
 console.log('user : ', process.env.POSTGRES_USER);
 console.log('host : ', process.env.POSTGRES_HOST);
@@ -18,45 +16,33 @@ console.log('database : ', process.env.POSTGRES_DB);
 console.log('password : ', process.env.POSTGRES_PWD);
 console.log('port : ', process.env.POSTGRES_PORT);
 
-;(async () => {
+(async () => {
   const client = await pool.connect();
   console.log('connected to the db for creating database !');
-  await pool.query('DROP TABLE IF EXISTS animes', (err, res) => {
-    if(err) {
+  await pool.query('DROP TABLE IF EXISTS projects', (err, res) => {
+    if (err) {
       console.log(err);
     }
-    console.log('DROP TABLE animes !');
+    console.log('DROP TABLE projects !');
   });
-  // todo search a way to create db and change db to animes_api programmatically
-  // await pool.query('CREATE DATABASE animes_api', (err, res) => {
-  //   if(err) {
-  //     console.log(err);
-  //   }
-  //   console.log('DATABASE api_animes created !');
-  // });
 
-  const queryTable = `CREATE TABLE animes(
-    id SERIAL PRIMARY KEY,
+  const queryTable = `CREATE TABLE projects(
+    id VARCHAR(250) PRIMARY KEY NOT NULL,
     title VARCHAR(250) NOT NULL,
-    synopsis TEXT,
-    rating integer,
-    startDate VARCHAR(250),
-    endDate VARCHAR(250),
-    status VARCHAR(250),
-    posterImage VARCHAR(250),
-    coverImage VARCHAR(250),
-    nbEpisode integer,
-    episodeLength integer,
-    ytVideoID VARCHAR(250)
-  )`; 
-  setTimeout(function(){
-    console.log("THIS IS");
-}, 8000);
+    description TEXT,
+    technos VARCHAR(250) ,
+    img VARCHAR(250),
+    url VARCHAR(250),
+    anneeReal VARCHAR(250)
+  )`;
+  setTimeout(function() {
+    console.log('in progress');
+  }, 8000);
   await pool.query(queryTable, (err, res) => {
-    if(err) {
+    if (err) {
       console.log(err);
     }
-    console.log('TABLE animes created !');
-  }); 
+    console.log('TABLE projects created !');
+  });
   await pool.end();
 })().catch(e => console.log(e.stack));

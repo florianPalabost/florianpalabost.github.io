@@ -1,19 +1,18 @@
 const db = require('../../db');
+const fs = require('fs');
 
-const addOrUpdateAnimeRewatched = async (req, res) => {
-  const animeRewatch = await db.getAnimesRewatchTimes(req);
-  if(animeRewatch) {
-    // already exist so we need to incremente watch time
-    return await db.updateAnimeRewatch(req);
+/**
+ * upload files in upload/projects/
+ * @param files
+ * @returns {Promise<void>}
+ */
+const upload = async files => {
+  try {
+  } catch (e) {
+    console.log(e);
   }
-  else {
-    // not exist -> we create a new anime-rewatch with value 1;
-    return await db.createAnimeRewatch(req);
-  }
-
 };
 
-
 module.exports = {
-  addOrUpdateAnimeRewatched
+  upload
 };

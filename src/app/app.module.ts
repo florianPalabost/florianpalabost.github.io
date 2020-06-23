@@ -9,7 +9,7 @@ import { SkillsComponentComponent } from './skills-component/skills-component.co
 import { EducationsComponentComponent } from './educations-component/educations-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { AboutComponentComponent } from './about-component/about-component.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { VerticalTimelineModule } from 'angular-vertical-timeline';
 import { ContactComponentComponent } from './contact-component/contact-component.component';
@@ -27,6 +27,19 @@ import { AlertComponent } from './alert/alert.component';
 import { SigninComponent } from './users/signin/signin.component';
 import { SignupComponent } from './users/signup/signup.component';
 import { UserProfileComponent } from './users/user-profile/user-profile.component';
+import { AuthInterceptor } from './users/auth.interceptor';
+import { OktaAuthModule, OKTA_CONFIG, OktaCallbackComponent } from '@okta/okta-angular';
+import sampleConfig from './app.config';
+
+const oktaConfig = Object.assign(
+  {
+    onAuthRequired: ({ oktaAuth, router }) => {
+      // Redirect the user to your custom login page
+      router.navigate(['/login']);
+    }
+  },
+  sampleConfig.oidc
+);
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -56,6 +69,7 @@ export function createTranslateLoader(http: HttpClient) {
     VerticalTimelineModule,
     FileSaverModule,
     ProgressBarModule,
+    OktaAuthModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -73,7 +87,10 @@ export function createTranslateLoader(http: HttpClient) {
     GraphQLModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    { provide: OKTA_CONFIG, useValue: oktaConfig },
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -45,3 +45,4 @@ Thumbs.db
 
 src/environments/*
 /backend_api/uploads/projects/*
+/backend_api/node_modules/

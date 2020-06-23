@@ -1,9 +1,10 @@
 const _ = require('underscore');
+const uploadService = require('../services/uploadService');
 
-const createProject = async project => {
-  return await db.addProject(project);
+const upload = async files => {
+  return await uploadService.upload(files);
 };
 
 module.exports = {
-  createProject
+  upload
 };

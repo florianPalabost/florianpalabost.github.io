@@ -1,20 +1,20 @@
 const { db } = require('../db');
-const { GraphQLObjectType, GraphQLID } = require('graphql');
+const { GraphQLObjectType, GraphQLList } = require('graphql');
 const { ProjectType } = require('./types');
 
 const RootQuery = new GraphQLObjectType({
   name: 'RootQueryType',
   type: 'Query',
   fields: {
-    project: {
-      type: ProjectType,
+    projects: {
+      type: new GraphQLList(ProjectType),
       resolve(parentValue) {
         const query = `SELECT * FROM projects`;
 
         return db
-          .one(query, values)
+          .query(query)
           .then(res => res)
-          .catch(err => err);
+          .catch(err => console.log(err));
       }
     }
   }

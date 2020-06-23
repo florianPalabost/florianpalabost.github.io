@@ -1,0 +1,61 @@
+version: '3.1'
+
+services:
+  angular_portfolio:
+    hostname: angular
+    container_name: angular_portfolio
+    build: ./
+    ports:
+      - "8181:8181"
+      - "4200:4200"
+      - "8888:80"
+    volumes:
+      - ./:/usr/src/app
+    restart: always
+    networks:
+      - postgres
+
+  postgres:
+    image: postgres:11.2-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: projects_portfolio
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  nodejs:
+    build: backend_api
+    command: nodemon npm start
+    container_name: nodejs
+    hostname: nodejs
+    environment:
+      DATABASE_URL: postgres://postgres:admin@postgres:5432/projects_portfolio
+      NODE_ENV: development
+      PORT: 3003
+    ports:
+      - "3003:3003"
+    volumes:
+      - ./backend_api:/usr/src/app
+    depends_on:
+      - postgres
+    networks:
+      - postgres
+    restart: always
+
+volumes:
+  postgres:
+
+networks:
+#  default:
+#    external:
+#      name: nginx-proxy
+  postgres:
+    driver: bridge

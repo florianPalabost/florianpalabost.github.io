@@ -1,8 +1,9 @@
-# Backend NODE JS API 
+# Backend GraphQL server using nodeJS Express 
 
 ## Requirements 
 - Docker-compose v12
 - node
+- graphQL
 
 
 ## Installation 
@@ -15,7 +16,8 @@
       - docker exec -it postgres_container sh
       - su postgres 
       - psql
-      - CREATE DATABASE animes_api;
+      - CREATE DATABASE projects_portfolio;
+      - CREATE TABLE projects (id VARCHAR(255) PRIMARY KEY, title VARCHAR(255),description VARCHAR(255), technos VARCHAR(255), img VARCHAR(255), url VARCHAR(255), anneeReal VARCHAR(255));
     ````
 - Run script to create the differents tables 
   ````bash
@@ -24,7 +26,7 @@
 ### With ORM Sequelize
 -
   ````bash
-  export DATABASE_URL=postgres://postgres:admin@localhost:5432/animes_api
+  export DATABASE_URL=postgres://postgres:admin@localhost:5432/projects_portfolio
   ````
 - lancer migration database ```` db:migrate ````
 
