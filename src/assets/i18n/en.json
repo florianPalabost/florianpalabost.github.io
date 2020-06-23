@@ -17,11 +17,11 @@
     "contact": "Contact Me"
   },
   "projects": {
-    "Minimapper" : "PWA realized for a TP  with API Navitio.io. With this app we can itinerate and see the differents TCL ligns. ",
-    "Portfolio" : "Portfolio website with my differents projects.",
-    "BEA Raphaël PISTILLI" : "Website vitrine with the differents projects realized",
-    "Chronos" : "App with few chronos realized for an escape game",
-    "Memory" : "Little implementation of the eponyme game"
+    "Minimapper": "PWA realized for a TP  with API Navitio.io. With this app we can itinerate and see the differents TCL ligns. ",
+    "Portfolio": "Portfolio website with my differents projects.",
+    "BEA Raphaël PISTILLI": "Website vitrine with the differents projects realized",
+    "Chronos": "App with few chronos realized for an escape game",
+    "Memory": "Little implementation of the eponyme game"
   },
   "experiences": {
     "TITLE": "Hello Angular with ngx-translate!",
@@ -47,5 +47,4 @@
     "TITLE": "Hello Angular with ngx-translate!",
     "SELECT": "Change language"
   }
-
 }

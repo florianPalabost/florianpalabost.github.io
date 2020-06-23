@@ -1,0 +1,65 @@
+<div class="user-profile">
+  <div class="row mt-5 mx-auto">
+    <div class="col-12">
+      <h1>Infos personnelles</h1>
+    </div>
+    <div class="col-12">
+      <p *ngIf="user.username">Username : {{user.username}}</p>
+      <p *ngIf="user.email">Email : {{user.email}}</p>
+      <p *ngIf="user.role">rôle : {{user.role}}</p>
+    </div>
+  </div>
+  <div class="col-lg-12 order-lg-2 mt-5 mx-auto text-center">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a href="" data-target="#completed" data-toggle="tab" class="nav-link active black">Completed ({{animesStatus['completed'].length}})</a>
+      </li>
+      <li class="nav-item">
+        <a href="" data-target="#watching" data-toggle="tab" class="nav-link black">Watching ({{animesStatus['watching'].length}})</a>
+      </li>
+      <li class="nav-item">
+        <a href="" data-target="#want_to_watch" data-toggle="tab" class="nav-link black">Want to watch ({{animesStatus['want_to_watch'].length}})</a>
+      </li>
+      <li class="nav-item">
+        <a href="" data-target="#dont_want_to_watch" data-toggle="tab" class="nav-link black">Dont want to watch ({{animesStatus['dont_want_to_watch'].length}})</a>
+      </li>
+      <li class="nav-item">
+        <a href="" data-target="#rewatched" data-toggle="tab" class="nav-link black">Rewatched ({{animesStatus['rewatched'].length}})</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div [ngClass]="{active: first}" class="tab-pane" [id]="status.key" *ngFor="let status of animesStatus | keyvalue; let first=first;">
+        <h3>Animes {{status.key}}</h3>
+        <div class="flex-container columns" *ngIf="status.value != null">
+          <div class="flex-item" *ngFor="let a of status.value">
+            <div class="animated">
+              <div class="card text-white box cardi">
+                <div class="flow">
+                  <a [routerLink]="['/animes/', a.anime.title]" target="_blank">
+                    <img style="max-width: 100%" class="card-img-top card-img-top-a "
+                         src="{{ a.anime.posterImage || 'https://media.kitsu.io/anime/poster_images/10007/original.jpg?1460247262' }}"
+                         alt="poster_{{ a.anime.title }}">
+                  </a>
+                </div>
+
+                <div class="card-img-overlay overlay">
+                  <div class="text">
+                    <h5 class="card-title mt-auto">{{ a.anime.title }}</h5>
+                    <a target="_blank" [routerLink]="['/animes/', a.anime.title]" class="btn btn-primary mt-auto">More</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-12" *ngIf="!(status.value != null)">
+          <p class="alert alert-danger">Aucun anime {{status.key}} enregistré</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

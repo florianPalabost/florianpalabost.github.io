@@ -1,9 +1,12 @@
 <!-- Portfolio Section -->
 <section class="page-section portfolio" id="projects">
   <div class="container-fluid">
-
     <!-- Portfolio Section Heading -->
-    <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{'nav.projects' | translate}}</h2>
+    <h2
+      class="page-section-heading text-center text-uppercase text-secondary mb-0"
+    >
+      {{ "nav.projects" | translate }}
+    </h2>
 
     <!-- Icon Divider -->
     <div class="divider-custom">
@@ -14,10 +17,11 @@
       <div class="divider-custom-line"></div>
     </div>
 
-    <!--    filter techs -->
+    <!--  filter techs -->
     <div class="row">
-      <div class="col-4 mx-auto mb-5 z-1">
-        <ng-multiselect-dropdown *ngIf="techs.length > 0"
+      <div class="col-12 col-md-4 mx-auto mb-5 z-1">
+        <ng-multiselect-dropdown
+          *ngIf="techs.length > 0"
           [placeholder]="'Selectionnez les technologie(s) utilisée(s)...'"
           [data]="techs"
           [settings]="dropdownSettings"
@@ -30,37 +34,58 @@
     </div>
 
     <!--  Projects are inversed (left || right) -->
-      <div class="row" [ngClass]="(i % 2 == 0) ? 'flex-row' : 'flex-row-reverse'" *ngFor="let project of projects; let i = index">
-        <div class="col-6 px-0 img-container">
-          <a  id="magnific-image-{{project.id}}" class="img-portfolio">
-            <img class="h-30 mx-auto card-img-top card-img-top-a " src="{{ project.img[0] }}" alt="img{{ project.title }}">
-            <div class="overlay mx-auto">
-              <fa-icon class="fa fa-play-circle-o fa-4x fa-3x" [icon]="faPlus" ></fa-icon>
-            </div>
-          </a>
-
-        </div>
-        <div class="col-6 text-center px-0">
-          <h3 class="portfolio-modal-title text-secondary text-uppercase mb-0">{{project.title}}</h3>
-          <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon">
-              <fa-icon [icon]="faStar"></fa-icon>
-            </div>
-            <div class="divider-custom-line"></div>
+    <div
+      class="row"
+      [ngClass]="i % 2 == 0 ? 'flex-row' : 'flex-row-reverse'"
+      *ngFor="let project of projects; let i = index"
+    >
+      <div
+        class="col-6 px-0 img-container"
+        [attr.data-aos]="i % 2 == 0 ? 'fade-right' : 'fade-left'"
+      >
+        <a id="magnific-image-{{ project.id }}" class="img-portfolio">
+          <img
+            class="h-30 mx-auto card-img-top card-img-top-a "
+            [src]="project.img"
+            alt="img{{ project.title }}"
+          />
+          <div class="overlay mx-auto">
+            <fa-icon
+              class="fa fa-play-circle-o fa-4x fa-3x"
+              [icon]="faPlus"
+            ></fa-icon>
           </div>
-
-          <a *ngIf="project.url !== ''" target="_blank" [href]="project.url">{{project.url}}</a>
-          <div class="row">
-            <div class="col-12">
-              <span class="ml-3 list-inline font-italic" *ngFor="let tech of project.technos">{{tech}}</span>
-            </div>
+        </a>
+      </div>
+      <div class="col-6 text-center px-0" [attr.data-aos]="i % 2 == 0 ? 'fade-left' : 'fade-right'">
+        <h3 class="portfolio-modal-title text-secondary text-uppercase mb-0">
+          {{ project.title }}
+        </h3>
+        <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon">
+            <fa-icon [icon]="faStar"></fa-icon>
           </div>
-          <p class="mt-4 mb-5 w-75 mx-auto">{{'projects.' + project.title | translate}}</p>
+          <div class="divider-custom-line"></div>
         </div>
 
+        <a *ngIf="project.url !== ''" target="_blank" [href]="project.url" rel="noopener noreferrer">{{
+          project.url
+        }}</a>
+        <div class="row">
+          <div class="col-12">
+            <span
+              class="ml-3 list-inline font-italic"
+              *ngFor="let tech of project?.technos"
+              >{{ tech }}</span
+            >
+          </div>
+        </div>
+        <p class="mt-4 mb-5 w-75 mx-auto">
+          {{ project?.description }}
+        </p>
+      </div>
     </div>
     <!-- /.row -->
-
   </div>
 </section>

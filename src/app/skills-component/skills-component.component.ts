@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {faStar} from '@fortawesome/free-solid-svg-icons';
-import {JsonService} from '../services/json.service';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { JsonService } from '../services/json.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-skills-component',
@@ -10,13 +11,15 @@ import {JsonService} from '../services/json.service';
 export class SkillsComponentComponent implements OnInit {
   faStar = faStar;
   skills = [];
-  constructor(private jsonService: JsonService) { }
+  constructor(private jsonService: JsonService) {}
 
   ngOnInit() {
     this.skills = this.jsonService.getSkills().shift();
-    $(function () {
+    $(function() {
       $('[data-toggle="popover"]').popover();
-    })
+    });
+    AOS.init({
+      duration: 2000
+    });
   }
-
 }

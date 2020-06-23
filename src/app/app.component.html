@@ -1,14 +1,25 @@
 <app-nav-component></app-nav-component>
-<app-about-component></app-about-component>
-<app-projects-component></app-projects-component>
-<app-experiences-component></app-experiences-component>
-<app-skills-component></app-skills-component>
-<app-educations-component></app-educations-component>
-<app-contact-component></app-contact-component>
+<alert></alert>
+
+<div *ngIf="url === ''">
+  <app-about-component></app-about-component>
+  <app-projects-component></app-projects-component>
+  <app-experiences-component></app-experiences-component>
+  <app-skills-component></app-skills-component>
+  <app-educations-component></app-educations-component>
+  <app-contact-component></app-contact-component>
+</div>
+
+<div *ngIf="url !== ''">
+  <router-outlet></router-outlet>
+</div>
+
 <app-footer-component></app-footer-component>
 
 <div class="scroll-to-top d-lg-none position-fixed ">
-  <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+  <a class="js-scroll-trigger d-block text-center text-white rounded"
+    href="#page-top">
     <fa-icon [icon]="faChevronUp"></fa-icon>
   </a>
 </div>
+

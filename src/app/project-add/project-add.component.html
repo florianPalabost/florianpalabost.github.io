@@ -1,0 +1,55 @@
+<section class="page-section container mt-5">
+  <div class="row">
+    <div class="col-12 col-md-4 mx-auto">
+      <h1>Add project</h1>
+      <form class="form" [formGroup]="formProject">
+        <div class="form-group">
+          <label for="title">Title
+            <input class="form-control" id="title" type="text" placeholder="title" formControlName="title">
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="url">URL
+            <input class="form-control" id="url" type="text" placeholder="URL of project if available" formControlName="url">
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="technos">Technologies
+            <ng-multiselect-dropdown
+              *ngIf="techs.length > 0"
+              id="technos"
+              [placeholder]="'Selectionnez les technologie(s) utilisée(s)...'"
+              [data]="techs"
+              formControlName="technos"
+              [settings]="dropdownSettings"
+              (onSelect)="addSkill($event)"
+              (onDeSelect)="removeSkillFromSelected($event)"
+              (onDeSelectAll)="refreshSkills()"
+              (onSelectAll)="fullSkills()"
+            >
+            </ng-multiselect-dropdown>
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="description">Description
+            <input class="form-control" id="description" type="text" placeholder="Description" formControlName="description">
+          </label>
+        </div>
+        <div class="form-group">
+          <ul>
+            <li *ngFor="let file of files" class="progress-bar-projects">
+              <span><progress-bar class="w-50" style="display: inline-flex" [progress]="file?.progress"></progress-bar>{{file?.data?.name}}</span>
+            </li>
+          </ul>
+          <button class="btn btn-primary" (click)="onClick()">Upload File</button>
+          <label for="fileUpload">Image(s)
+            <input type="file" #fileUpload id="fileUpload" formControlName="img" name="fileUpload" multiple="multiple" accept="image/*" style="display:none;" />
+          </label>
+        </div>
+        <button class="btn btn-primary" (click)="addProject()">Add</button>
+      </form>
+    </div>
+  </div>
+
+</section>
+

@@ -1,31 +1,41 @@
-import { Component, OnInit } from '@angular/core';
-import {faDownload, faEnvelope, faStar} from '@fortawesome/free-solid-svg-icons';
-import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {FileSaverService} from 'ngx-filesaver';
+import { Component, OnInit } from "@angular/core";
+import {
+  faDownload,
+  faEnvelope,
+  faStar,
+  faCode
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { FileSaverService } from "ngx-filesaver";
 declare var require: any;
-const FileSaver = require('file-saver');
+const FileSaver = require("file-saver");
 
 @Component({
-  selector: 'app-about-component',
-  templateUrl: './about-component.component.html',
-  styleUrls: ['./about-component.component.scss']
+  selector: "app-about-component",
+  templateUrl: "./about-component.component.html",
+  styleUrls: ["./about-component.component.scss"]
 })
 export class AboutComponentComponent implements OnInit {
   faDownload = faDownload;
   faStar = faStar;
   faLinkedIn = faLinkedin;
-  faGithub = faGithub ;
+  faGithub = faGithub;
   faEnvelope = faEnvelope;
+  faCode = faCode;
 
-  constructor(private http: HttpClient, private _FileSaverService: FileSaverService) { }
+  constructor(
+    private http: HttpClient,
+    private _FileSaverService: FileSaverService
+  ) {}
 
   ngOnInit() {
+    console.log(this.http.get("http://nodejs:3001/"));
   }
 
   downloadPdf() {
-    const pdfUrl = 'https://docdro.id/rq7BVmu';
-    const pdfName = 'cv_florian.pdf';
+    const pdfUrl = "https://docdro.id/rq7BVmu";
+    const pdfName = "cv_florian.pdf";
 
     // window.open('./assets/cv_florian.pdf',);
     // todo test with a route & routerlink in html !!!
@@ -33,16 +43,15 @@ export class AboutComponentComponent implements OnInit {
     // const filePDF = open(pdfUrl);
     // return FileSaver.saveAs(filePDF, pdfName);
 
-    const httpOptions : any    = {
+    const httpOptions: any = {
       headers: new HttpHeaders({
-        'Access-Control-Allow-Origin': 'https://docdro.id',
+        "Access-Control-Allow-Origin": "https://docdro.id"
       })
-        // responseType: 'blob'
+      // responseType: 'blob'
     };
 
-    this.http.get('https://docdro.id/rq7BVmu', httpOptions).subscribe(res => {
+    this.http.get("https://docdro.id/rq7BVmu", httpOptions).subscribe(res => {
       this._FileSaverService.save((<any>res)._body, pdfName);
     });
-
   }
 }

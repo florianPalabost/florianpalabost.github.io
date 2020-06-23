@@ -1,12 +1,17 @@
 <!-- Masthead -->
 <header class="masthead bg-primary text-white text-center">
   <div class="container d-flex align-items-center flex-column">
-
     <!-- Masthead Avatar Image -->
-    <img class="rounded-circle masthead-avatar mb-5" src="assets/profil.png" alt="profil">
+    <img
+      class="rounded-circle masthead-avatar mb-5"
+      src="assets/profil.png"
+      alt="profil"
+    />
 
     <!-- Masthead Heading -->
-    <h1 class="masthead-heading text-uppercase mb-0 text-dark"> {{'about.hello' | translate}}</h1>
+    <h1 class="masthead-heading text-uppercase mb-0 text-dark">
+      {{ "about.hello" | translate }}
+    </h1>
 
     <!-- Icon Divider -->
     <div class="divider-custom divider-dark">
@@ -18,26 +23,109 @@
     </div>
 
     <!-- Masthead Subheading -->
-    <p class="masthead-subheading font-weight-light mb-0 font-weight-bolder text-dark"> {{'about.job' | translate}}</p>
+    <p
+      class="masthead-subheading font-weight-light mb-0 font-weight-bolder text-dark"
+    >
+      {{ "about.job" | translate }}
+    </p>
     <div class="text-center mt-4">
       <p>
-        <a class="btn btn-outline-dark btn-social mx-1" target="_blank" href="https://www.linkedin.com/in/florian-palabost-881711b4/">
-        <fa-icon [icon]="faLinkedIn" [styles]="{'stroke': 'black'}" size="2x"></fa-icon>
-      </a>
-        <a class="btn btn-outline-dark btn-social mx-1" target="_blank" href="https://github.com/florianPalabost">
-          <fa-icon [icon]="faGithub" [styles]="{'stroke': 'black'}" size="2x"></fa-icon>
+        <a
+          class="btn btn-outline-dark btn-social mx-1"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/florian-palabost-881711b4/"
+        >
+          <fa-icon
+            [icon]="faLinkedIn"
+            [styles]="{ stroke: 'black' }"
+            size="2x"
+          ></fa-icon>
+        </a>
+        <a
+          class="btn btn-outline-dark btn-social mx-1"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/florianPalabost"
+        >
+          <fa-icon
+            [icon]="faGithub"
+            [styles]="{ stroke: 'black' }"
+            size="2x"
+          ></fa-icon>
         </a>
       </p>
 
-      <a class="btn btn-xl black" target="_blank" href="https://docdro.id/rq7BVmu">
+      <a class="btn btn-xl black" target="_blank" href="#" rel="noopener noreferrer">
         <fa-icon class="mr-2" [icon]="faDownload"></fa-icon>
-        {{'about.download' | translate}}
+        {{ "about.download" | translate }}
       </a>
       <a class="btn btn-xl btn-outline-black ml-3" href="#contact">
-        <fa-icon class="mr-2" [styles]="{'stroke': 'black'}" [icon]="faEnvelope"></fa-icon>
-        {{'about.contact' | translate}}
+        <fa-icon
+          class="mr-2"
+          [styles]="{ stroke: 'black' }"
+          [icon]="faEnvelope"
+        ></fa-icon>
+        {{ "about.contact" | translate }}
       </a>
-
     </div>
   </div>
 </header>
+
+<section class="page-section text-center" id="what_i_do">
+  <h2
+    class="page-section-heading text-center text-uppercase text-secondary mb-0"
+  >
+    What I do ?
+  </h2>
+  <div class="divider-custom">
+    <div class="divider-custom-line"></div>
+    <div class="divider-custom-icon">
+      <fa-icon [icon]="faStar"></fa-icon>
+    </div>
+    <div class="divider-custom-line"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-3 card border-0">
+      <fa-icon size="5x" class="card-img-top" [icon]="faCode"></fa-icon>
+      <div class="card-body">
+        <h5 class="card-title">Développement web</h5>
+        <p class="card-text">
+          Web is my passion and I develop entire solutions, from idea to
+          production, using modern technologies
+        </p>
+      </div>
+    </div>
+    <div class="col-3 card border-0">
+      <fa-icon size="5x" class="card-img-top" [icon]="faCode"></fa-icon>
+      <div class="card-body">
+        <h5 class="card-title">Site vitrine</h5>
+        <p class="card-text">
+          Web is my passion and I develop entire solutions, from idea to
+          production, using modern technologies
+        </p>
+      </div>
+    </div>
+    <div class="col-3 card border-0">
+      <fa-icon size="5x" class="card-img-top" [icon]="faCode"></fa-icon>
+      <div class="card-body">
+        <h5 class="card-title">Application web</h5>
+        <p class="card-text">
+          Web is my passion and I develop entire solutions, from idea to
+          production, using modern technologies
+        </p>
+      </div>
+    </div>
+    <div class="col-3 card border-0">
+      <fa-icon size="5x" class="card-img-top" [icon]="faCode"></fa-icon>
+      <div class="card-body">
+        <h5 class="card-title">X</h5>
+        <p class="card-text">
+          Web is my passion and I develop entire solutions, from idea to
+          production, using modern technologies
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -44,3 +44,4 @@ testem.log
 Thumbs.db
 
 src/environments/*
+/backend_api/uploads/projects/*

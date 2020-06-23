@@ -1,7 +1,7 @@
 // Import variables (overrides Bootstrap defaults)
 @import "assets/scss/base/variables.scss";
 
-@import '../node_modules/bootstrap/scss/bootstrap';
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "~angular-vertical-timeline/dist/vertical-timeline.css";
 
 // Import base styles
@@ -27,11 +27,13 @@ body {
   overflow-x: hidden;
 }
 @media (min-width: 992px) {
-
   .bg-primary {
-    background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("assets/img/header.png");
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url("assets/img/header.png");
     background-position: center;
     background-size: cover;
   }
 }
-

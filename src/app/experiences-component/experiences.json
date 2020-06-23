@@ -1,6 +1,6 @@
 [
   {
-    "year" : "2019",
+    "year": "2019",
     "entreprise": "Micropole",
     "poste": "Stagiaire Ingénieur d'études",
     "contrat": "stage",
@@ -9,7 +9,7 @@
     "technos": "php, drupal 8, twig, mysql, html, js"
   },
   {
-    "year" : "2017",
+    "year": "2017",
     "entreprise": "BEA Raphaël PISTILLI",
     "poste": "Développeur web",
     "contrat": "CDD",
@@ -18,7 +18,7 @@
     "technos": "php, laravel, html, js"
   },
   {
-    "year" : "2015",
+    "year": "2015",
     "entreprise": "Médiathèque Jean Prévost",
     "poste": "Stagiaire Développeur full-stack",
     "contrat": "stage",

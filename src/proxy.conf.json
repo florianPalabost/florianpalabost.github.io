@@ -1,7 +1,9 @@
 {
   "https://docdro.id/*": {
-    "target": "https://docdro.id",
+    "target": "",
     "secure": true,
-    "logLevel": "debug"
+    "logLevel": "debug",
+    "^/": "",
+    "changeOrigin": true
   }
 }

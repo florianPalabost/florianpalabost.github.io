@@ -9,16 +9,24 @@ import { SkillsComponentComponent } from './skills-component/skills-component.co
 import { EducationsComponentComponent } from './educations-component/educations-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { AboutComponentComponent } from './about-component/about-component.component';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {VerticalTimelineModule} from 'angular-vertical-timeline';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { VerticalTimelineModule } from 'angular-vertical-timeline';
 import { ContactComponentComponent } from './contact-component/contact-component.component';
-import {FileSaverModule} from 'ngx-filesaver';
-import {TranslateCompiler, TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import {TranslateMessageFormatCompiler} from 'ngx-translate-messageformat-compiler';
-import {ReactiveFormsModule} from '@angular/forms';
-import {NgMultiSelectDropDownModule} from 'ng-multiselect-dropdown';
+import { FileSaverModule } from 'ngx-filesaver';
+import { TranslateCompiler, TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateMessageFormatCompiler } from 'ngx-translate-messageformat-compiler';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { GraphQLModule } from './graphql.module';
+import { ProjectAddComponent } from './project-add/project-add.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ProgressBarModule } from 'angular-progress-bar';
+import { AlertComponent } from './alert/alert.component';
+import { SigninComponent } from './users/signin/signin.component';
+import { SignupComponent } from './users/signup/signup.component';
+import { UserProfileComponent } from './users/user-profile/user-profile.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -28,13 +36,18 @@ export function createTranslateLoader(http: HttpClient) {
   declarations: [
     AppComponent,
     NavComponentComponent,
+    AlertComponent,
     ProjectsComponentComponent,
+    ProjectAddComponent,
     ExperiencesComponentComponent,
     SkillsComponentComponent,
     EducationsComponentComponent,
     FooterComponentComponent,
     AboutComponentComponent,
-    ContactComponentComponent
+    ContactComponentComponent,
+    SigninComponent,
+    SignupComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -42,25 +55,28 @@ export function createTranslateLoader(http: HttpClient) {
     FontAwesomeModule,
     VerticalTimelineModule,
     FileSaverModule,
+    ProgressBarModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: (createTranslateLoader),
+        useFactory: createTranslateLoader,
         deps: [HttpClient]
       },
       // compiler configuration
       compiler: {
         provide: TranslateCompiler,
-        useFactory: (TranslateMessageFormatCompilerFactory)
+        useFactory: TranslateMessageFormatCompilerFactory
       }
     }),
     ReactiveFormsModule,
-    NgMultiSelectDropDownModule
+    NgMultiSelectDropDownModule,
+    GraphQLModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
 
 // required for AOT compilation
 export function TranslateMessageFormatCompilerFactory() {

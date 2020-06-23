@@ -1,5 +1,9 @@
 <section class="page-section text-center" id="skills">
-  <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">{{'nav.skills' | translate}}</h2>
+  <h2
+    class="page-section-heading text-center text-uppercase text-secondary mb-0"
+  >
+    {{ "nav.skills" | translate }}
+  </h2>
 
   <!-- Icon Divider -->
   <div class="divider-custom">
@@ -11,42 +15,47 @@
   </div>
 
   <!--todo make this code more generic because it repeat 4 times !-->
-  <div class="row mx-auto text-uppercase">
+  <div class="row mx-auto text-uppercase"  [attr.data-aos]="'fade-down'">
     <div class="col-12 col-md-3 col-lg-3 mt-sm-5">
       <h3>Backend</h3>
       <div class="col">
-        <div class="col mx-auto" *ngFor="let skill of skills['backend'] | keyvalue">
-          <p>{{skill.key}}</p>
+        <div
+          class="col mx-auto"
+          *ngFor="let skill of skills['backend'] | keyvalue"
+        >
+          <p>{{ skill.key }}</p>
         </div>
       </div>
-
     </div>
     <div class="col-12 col-md-3 col-lg-3 mt-sm-5">
       <h3>Frontend</h3>
       <div class="col">
-        <div class="col mx-auto" *ngFor="let skill of skills['frontend'] | keyvalue">
-          <p>{{skill.key}}</p>
+        <div
+          class="col mx-auto"
+          *ngFor="let skill of skills['frontend'] | keyvalue"
+        >
+          <p>{{ skill.key }}</p>
         </div>
       </div>
-
     </div>
     <div class="col-12 col-md-3 col-lg-3 mt-sm-5">
       <h3>BDD</h3>
       <div class="col">
         <div class="col mx-auto" *ngFor="let skill of skills['bdd'] | keyvalue">
-          <p>{{skill.key}}</p>
+          <p>{{ skill.key }}</p>
         </div>
       </div>
-
     </div>
     <div class="col-12 col-md-3 col-lg-3 mt-sm-5">
       <h3>Tools</h3>
       <div class="col">
-        <div class="col mx-auto" *ngFor="let skill of skills['others'] | keyvalue">
-            <p>{{skill.key}}</p>
+        <div
+          class="col mx-auto"
+          *ngFor="let skill of skills['others'] | keyvalue"
+        >
+          <p>{{ skill.key }}</p>
         </div>
       </div>
-
     </div>
   </div>
 </section>

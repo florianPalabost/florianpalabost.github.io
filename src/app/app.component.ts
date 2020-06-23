@@ -1,30 +1,32 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import 'magnific-popup';
-import {faChevronUp} from '@fortawesome/free-solid-svg-icons';
-declare  var jQuery:  any;
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import Darkmode from 'darkmode-js';
-import {TranslateService} from '@ngx-translate/core';
-
+import { TranslateService } from '@ngx-translate/core';
+import { Location } from '@angular/common';
+declare var jQuery: any;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  providers: [Location]
 })
 export class AppComponent implements OnInit {
   faChevronUp = faChevronUp;
-
-  constructor(private translate: TranslateService) {}
+  url = '';
+  constructor(private translate: TranslateService, private location: Location) {}
 
   ngOnInit(): void {
+    this.url = this.location.path();
     const options = {
       bottom: '64px', // default: '32px'
       right: 'unset', // default: '32px'
       left: '32px', // default: 'unset'
       time: '0.5s', // default: '0.3s'
       mixColor: '#fff', // default: '#fff'
-      backgroundColor: '#fff',  // default: '#fff'
-      buttonColorDark: '#100f2c',  // default: '#100f2c'
+      backgroundColor: '#fff', // default: '#fff'
+      buttonColorDark: '#100f2c', // default: '#100f2c'
       buttonColorLight: '#fff', // default: '#fff'
       saveInCookies: false, // default: true,
       label: '🌓', // default: ''
@@ -37,13 +39,20 @@ export class AppComponent implements OnInit {
       // todo replace fct deprecate
       // Smooth scrolling using jQuery easing
       $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        if (
+          location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+          location.hostname == this.hostname
+        ) {
           let target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
           if (target.length) {
-            $('html, body').animate({
-              scrollTop: (target.offset().top - 71)
-            }, 1000, 'swing');
+            $('html, body').animate(
+              {
+                scrollTop: target.offset().top - 71
+              },
+              1000,
+              'swing'
+            );
             return false;
           }
         }
@@ -85,17 +94,17 @@ export class AppComponent implements OnInit {
 
       // Floating label headings for the contact form
       $(function() {
-        $('body').on('input propertychange', '.floating-label-form-group', function(e) {
-          $(this).toggleClass('floating-label-form-group-with-value', !!$(e.target).val());
-        }).on('focus', '.floating-label-form-group', function() {
-          $(this).addClass('floating-label-form-group-with-focus');
-        }).on('blur', '.floating-label-form-group', function() {
-          $(this).removeClass('floating-label-form-group-with-focus');
-        });
+        $('body')
+          .on('input propertychange', '.floating-label-form-group', function(e) {
+            $(this).toggleClass('floating-label-form-group-with-value', !!$(e.target).val());
+          })
+          .on('focus', '.floating-label-form-group', function() {
+            $(this).addClass('floating-label-form-group-with-focus');
+          })
+          .on('blur', '.floating-label-form-group', function() {
+            $(this).removeClass('floating-label-form-group-with-focus');
+          });
       });
-
     })(jQuery); // End of use strict
-
   }
-
 }
