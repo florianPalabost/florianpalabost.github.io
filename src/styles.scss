@@ -26,6 +26,10 @@
 body {
   overflow-x: hidden;
 }
+
+.link {
+  cursor: pointer;
+}
 @media (min-width: 992px) {
   .bg-primary {
     background-image: linear-gradient(
