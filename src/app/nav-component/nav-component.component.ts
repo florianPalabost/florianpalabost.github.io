@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { OktaAuthService } from '@okta/okta-angular';
 import appConfig from '../app.config';
+
 @Component({
   selector: 'app-nav-component',
   templateUrl: './nav-component.component.html',

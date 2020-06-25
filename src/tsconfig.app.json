@@ -2,7 +2,8 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "types": ["jquery"]
+    "types": ["jquery"],
+    "allowSyntheticDefaultImports": true
   },
-  "exclude": ["test.ts", "**/*.spec.ts"]
+  "exclude": ["test.ts", "**/*.spec.ts", "../node_modules/**"]
 }

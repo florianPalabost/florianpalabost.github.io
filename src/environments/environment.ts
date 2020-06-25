@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  user_id: "user_gc48OWqeZgUrO0EKme4Fp"
+  user_id: '',
+  client_id: '',
+  issuer: '',
+  redirectUri: ''
 };
 
 /*

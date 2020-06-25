@@ -1,8 +1,10 @@
+import { environment } from 'src/environments/environment';
+
 export default {
   oidc: {
-    clientId: '0oagrhgdn9flT4y9A4x6',
-    issuer: `https://dev-953320.okta.com/oauth2/default`,
-    redirectUri: 'http://localhost:4200/implicit/callback',
+    clientId: environment.client_id || '',
+    issuer: `https://${environment.issuer}.okta.com/oauth2/default`,
+    redirectUri: environment.redirectUri,
     scopes: ['openid', 'profile', 'email'],
     testing: {}
   },

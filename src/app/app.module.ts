@@ -30,6 +30,7 @@ import { UserProfileComponent } from './users/user-profile/user-profile.componen
 import { AuthInterceptor } from './users/auth.interceptor';
 import { OktaAuthModule, OKTA_CONFIG, OktaCallbackComponent } from '@okta/okta-angular';
 import sampleConfig from './app.config';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const oktaConfig = Object.assign(
   {
@@ -60,7 +61,8 @@ export function createTranslateLoader(http: HttpClient) {
     ContactComponentComponent,
     SigninComponent,
     SignupComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

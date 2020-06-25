@@ -51,7 +51,6 @@ export class ProjectsComponentComponent implements OnInit {
         project.img = imgSrc[0]?.src;
       }
 
-      console.log('imgsrc,', imgSrc);
       // tips: document.ready is deprecated, now we use this method
       $(function() {
         $('#magnific-image-' + project.id).magnificPopup({

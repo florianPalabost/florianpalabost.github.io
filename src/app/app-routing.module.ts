@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { OktaAuthGuard, OktaCallbackComponent } from '@okta/okta-angular';
 import { SigninComponent } from './users/signin/signin.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
   { path: 'projects/add', component: ProjectAddComponent, canActivate: [OktaAuthGuard] },
@@ -15,7 +16,8 @@ const routes: Routes = [
     path: 'login',
     component: SigninComponent
   },
-  { path: '', component: AppComponent }
+  { path: '', component: AppComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
